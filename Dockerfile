@@ -9,8 +9,8 @@ RUN apk update && apk --no-cache add curl
 
 # Copy Go Code into the alpine image
 WORKDIR $GOPATH/src/fileserver
-COPY fileserver/main.go .
-COPY fileserver/go.mod .
+COPY main.go .
+COPY go.mod .
 
 # Enable Go Modules and download dependencys
 ENV GO111MODULE=on
